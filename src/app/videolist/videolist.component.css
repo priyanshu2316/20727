@@ -1,0 +1,65 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.meracard{
+  
+    margin: 10px;
+    overflow: auto;
+    padding: 5px 16px;
+    border-radius: 10px;
+    margin-top: 20px;
+
+}
+.meracard:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+.example-margin {
+    margin-right: 10px;
+  }
+.im{
+    
+    vertical-align: middle;
+    width: 100%;
+    height: 120px;
+
+}
+.unsolved{
+    border-bottom: 15px solid rgb(207, 34, 34);
+}
+.review{
+    border-bottom: 15px solid rgb(91, 161, 253);
+}
+.solved{
+    border-bottom: 15px solid rgb(83, 255, 126);
+}
+.videolist-content{
+    padding-top: 56px;
+    height: auto;
+    min-height: 100%;
+    background: #863b63;
+    padding-bottom: 10px;
+}
+.videolist-content .videolist-content-item{
+    padding-left: 0;
+    padding-right: 0;
+}
+.videolist-content .videolist-content-item h3{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.videolist-content .videolist-content-item p{
+    word-wrap: break-word;
+    margin-bottom: 5px;
+}
+@media screen and (min-width: 768px){
+    .videolist-content{
+        padding-top: 64px;
+    }
+    .videolist-content-container{
+      width: 60%;
+      margin: 0 auto;
+    }
+    .im{
+        width: 120px;
+        float: right;
+    }
+}

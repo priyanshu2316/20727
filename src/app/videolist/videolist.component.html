@@ -1,0 +1,101 @@
+
+<!--<ul>
+<li (click)="onSelect(Vid)" *ngFor="let Vid of Vids"><a>{{Vid.category}}</a><div><img src="{{'http://localhost:3000/'+Vid.image}}"></div></li>
+</ul>-->
+<!--
+<ul>
+<li (click)="onSelect(Vid2)" *ngFor="let Vid2 of Vids"><a>{{Vid2.url}}</a></li>
+</ul>--><!--
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+  <div fxFlex>
+    <div>
+      <h3>DASHBOARD</h3>
+      <hr>
+    </div>
+  </div>
+
+  <div fxFlex>
+    <mat-grid-list cols="2" rowHeight="200px">
+      <mat-grid-tile *ngFor="let s of prbs">
+          <h1 mat-line>{{s.status}}</h1>
+        <mat-grid-tile-footer>
+          <h1 mat-line>{{s.description | uppercase}}</h1>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+
+
+</div>-->
+<!--
+<mat-grid-list  cols="3" rowHeight="600px" gutterSize=10px; >
+    <mat-grid-tile class=problem *ngFor="let vid of prbs">
+      <mat-card class=problem >
+       <h1 align="center">{{vid.category}}</h1>
+       <br>
+       <img margin-left=50px width=200px height=200px align=center src={{vid.mage}} alt="preview not available" >
+       <br>
+       <mat-card-content>
+       <div class=cl>
+          
+          
+          <div class=Desc>
+          <b>Description: </b> {{vid.description}}
+           </div>
+          <br>
+          <b>Loaction: </b> {{vid.location}}
+          <br>
+          <b>Status:</b> {{vid.status}}
+        </div>
+      </mat-card-content>
+      
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+-->
+
+
+
+
+<app-home></app-home>
+<section>
+  <div class="videolist-content">
+    <div class="videolist-content-container">
+    <div *ngFor="let prb of prbs" >
+      <mat-card (click)="showdes()" [class]="a+prb.status+b">
+          <div class="col-xs-8 col-md-10 videolist-content-item">
+
+          <h3>{{prb.category}}</h3>
+          
+          <p><b>Location :  </b>{{prb.location}}</p>
+          <p><b>Status :  </b>{{prb.status}}</p>
+          <p><b>Description :  </b>{{prb.description}}</p>
+          <p><b>Date Added :  </b>{{prb.dateS}}</p>
+          <p><b>Submitted By :  </b>{{prb.username}}</p>
+        </div>
+      <div class="col-xs-4 col-md-2 videolist-content-item">
+        <div>
+           <img class="im" src="{{'http://192.168.42.33:3000'+prb.image}}" alt="NO PREVIEW IMAGE UPLOADED">
+        </div>
+      </div>
+        <!--<mat-radio-group [(ngModel)]="prb.status">
+      
+          <mat-radio-button (click)="ival1(prb)" class="example-margin" value="unsolved">
+            Unsolved
+          </mat-radio-button>
+          <mat-radio-button (click)="ival2(prb)" class="example-margin" value="solved">
+            Solved
+          </mat-radio-button>
+          
+        </mat-radio-group>-->
+       
+      </mat-card>
+    </div>
+  </div>
+  </div>
+</section>

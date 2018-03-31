@@ -1,0 +1,41 @@
+<div fxLayout="column" fxFlex >
+
+ <mat-toolbar class="tc" color="primary" >
+
+
+
+
+      <div [class]="navcomp">
+      <a class="of" mat-button routerLink="/videos" routerLinkActive="active"><span class="fa fa-th-large fa-lg"></span> </a></div>
+     <div [class]="navcomp" [hidden]="co"> <a  mat-button routerLink="/sa" routerLinkActive="active"><span class="fa fa-cog fa-lg"></span></a>
+    </div>
+    <div [class]="navcomp" [hidden]="co"> <a  mat-button routerLink="/sa/viewanalysis" routerLinkActive="active"><span class="fa fa-bar-chart fa-lg"></span></a>
+    </div>
+     <div [class]="navcomp" [hidden]="ch"> 
+       <button mat-button routerLink="/chat" routerLinkActive="active">
+        <span class="fa fa-comments fa-lg">
+
+        </span> </button>
+        
+     </div>
+     <div [class]="navcomp" [hidden]="ch"> 
+        <button mat-button routerLink="/myprob" routerLinkActive="active">
+         <span class="fa fa-list fa-lg">
+ 
+         </span> </button>
+         
+      </div>
+      
+     <div [class]="navcomp" [hidden]="pa"> <a class="of" mat-button routerLink="/padmin" routerLinkActive="active"><span class="fa fa-list fa-lg"></span></a>
+    </div>
+    <div [class]="navcomp" [hidden]="pa"> <a class="of" mat-button routerLink="/padmin/technician" routerLinkActive="active"><span class="fa fa-wrench fa-lg"></span></a>
+    </div>
+    <div [class]="navcomp" >
+      <a class="of" mat-button (click)="logout()" ><span class="fa fa-sign-out fa-lg"></span> </a>
+    </div>
+
+
+
+</mat-toolbar>
+ 
+<router-outlet></router-outlet>

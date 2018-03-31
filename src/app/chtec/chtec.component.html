@@ -1,0 +1,53 @@
+<app-home></app-home>
+<div class="add-technician-container">
+  <div [hidden]="submit" class="add-technician-content">
+  <h2>Add Technician</h2>
+  <form (ngSubmit)="OnSubmit()" #thisForm="ngForm">
+    <div class="form-group">
+      <label for="TechName">Name</label>
+      <input type="text" class="form-control" id="TechName" required [(ngModel)]="techi.name" name="TechName" #name="ngModel">
+      </div>
+
+<div class="form-group">
+      <label for="Contact">Contact</label>
+      <input type="number" class="form-control" id="Contact" required [(ngModel)]="techi.phone" name="Contact" #name="ngModel">
+    </div>
+
+
+    <div class="form-group">
+      <label for="Category">Category</label>
+      <select class="form-control" id="Category" required [(ngModel)]="techi.specialisation" name="Category">
+       <option *ngFor="let categ of categs" [value]="categ.category">{{categ.category}}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!thisForm.form.valid">Submit</button>
+
+  </form>
+ </div>
+
+<div [hidden]="!submit" class="confirm-submit-block">
+  <h2>You submitted the following:</h2>
+ 
+  <div class="row">
+    <div class="col-xs-3">Name</div>
+    <div class="col-xs-9 pull-left">{{ techi.name }}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-3">Contact</div>
+    <div class="col-xs-9 pull-left">{{ techi.phone }}</div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-xs-3">Category</div>
+    <div class="col-xs-9 pull-left">{{ techi.specialisation }}</div>
+  </div>
+  <br>
+  <button class="btn btn-primary" (click)="submit=false">Edit</button>
+  <button class="btn btn-primary" (click)="addedcategory()">Done</button>
+  <div [hidden]="i">
+  <button  mat-button color='primary' routerLink="/sa">Make more changes</button>
+</div>
+</div>

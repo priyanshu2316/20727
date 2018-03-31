@@ -1,0 +1,74 @@
+body{
+    background: darkgrey;
+}
+.meracard{
+  
+    margin: 10px;
+    overflow: auto;
+    padding: 5px 16px;
+}
+.meracard:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+.example-margin {
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+.im{
+    vertical-align: middle;
+    width: 100%;
+    height: 120px;
+}
+.unsolved{
+    border-bottom: 15px solid rgb(207, 34, 34);
+}
+.review{
+    border-bottom: 15px solid rgb(91, 161, 253);
+}
+.solved{
+    border-bottom: 15px solid rgb(83, 255, 126);
+}
+.unsolved1{
+    display: none;
+}
+.solved1{
+    display: none;
+}
+
+.user-problem-container{
+    height: auto;
+    min-height: 100%;
+    padding-top: 56px;
+    background: #863b63;
+    padding-bottom: 10px;
+}
+.videolist-content-item{
+    padding-left: 0;
+    padding-right: 0;
+}
+.user-problem-container .videolist-content-item h3{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.user-problem-container .videolist-content-item p{
+    word-wrap: break-word;
+    margin-bottom: 5px;
+}
+.user-problem-container .meracard{
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+@media screen and (min-width: 768px){
+  .user-problem-container{
+      padding-top: 64px;
+  }
+  .user-problem-content{
+      width: 60%;
+      margin: 0 auto;
+  }
+  .im{
+      width: 120px;
+      float: right;
+  }
+}

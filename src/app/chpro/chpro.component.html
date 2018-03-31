@@ -1,0 +1,70 @@
+<app-home></app-home>
+  
+<div class="add-prob-admin-container">
+  <div [hidden]="submit" class="add-prob-admin-content">
+  <h2>Add Problem Administrator</h2>
+  <form (ngSubmit)="OnSubmit()" #thisForm="ngForm">
+
+    <div class="form-group">
+      <label for="AdminName">Name</label>
+      <input type="text" class="form-control" id="AdminName" required [(ngModel)]="admin.name" name="AdminName" #name="ngModel">
+                  <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+       Name is required
+     </div>
+    </div>
+
+     <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="password" class="form-control" id="Password" required [(ngModel)]="admin.password" name="Password">
+      </div>
+      <div class="form-group">
+         <label for="userName">Username</label>
+         <input type="text" class="form-control" id="userName" required [(ngModel)]="admin.username" name="userName">
+       </div>
+
+      <div class="form-group">
+          <label for="Contact">Contact Number</label>
+          <input type="text" class="form-control" id="Contact" required [(ngModel)]="admin.phone" name="Contact">
+        </div>
+
+        <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="email" class="form-control" id="Email" required [(ngModel)]="admin.email" name="Email">
+          </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!thisForm.form.valid">Submit</button>
+
+  </form>
+ </div>
+  <div [hidden]="!submit" class="confirm-submit-block">
+  <h2>You submitted the following:</h2>
+ 
+  <div class="row">
+    <div class="col-xs-3">Name</div>
+    <div class="col-xs-9 pull-left">{{ admin.name }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">userName</div>
+    <div class="col-xs-9 pull-left">{{ admin.username }}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-3">Contact</div>
+    <div class="col-xs-9 pull-left">{{ admin.phone }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Password</div>
+    <div class="col-xs-9 pull-left">{{ admin.password }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Email</div>
+    <div class="col-xs-9 pull-left">{{ admin.email }}</div>
+  </div>
+  <br>
+  <button class="btn btn-primary" (click)="submit=false">Edit</button>
+  <button class="btn btn-primary" (click)="addedpadmin()">Done</button>
+  <div [hidden]="i">
+  <button  mat-button color='primary' routerLink="/sa">Make more changes</button>
+</div>
+  </div>
+</div>

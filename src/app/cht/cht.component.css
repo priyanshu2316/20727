@@ -1,0 +1,223 @@
+.card1{
+    color: blue;
+    background-color: black
+}
+.card2{
+    color: black;
+    background-color: blue;
+    background-image: "imgpath"
+}
+.b{
+    background-position-x: right;
+    background-position-y: bottom;
+   align-self: unset;
+}
+.btn
+{
+    margin: 10px;
+}
+*{
+    margin:0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(100, 100, 100);
+}
+.alert{
+    color: red;
+}
+.chatbox{
+    width: 100vmin;
+    
+    margin: 0 auto;
+}
+
+.chatlogs {
+  padding: 10px;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: 10px;
+  overflow-y: scroll;
+  height: 83%;
+  position: relative;
+}
+
+.chatlogs::-webkit-scrollbar{
+    width: 10px;
+}
+
+.chatlogs::-webkit-scrollbar-thumb{
+    border-radius:5px;
+    background: rgb(214, 214, 214); 
+}
+.chat
+{
+    display: flex;
+    flex-flow:row wrap;
+    align-items:flex-start;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.user-photo{
+    width: 60px;
+    height: 60px;
+    background: tomato;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: "imgpath";
+}
+.user-photo img{
+    width:100%;
+}
+.chat .message{
+    width: calc(100% - 70px);
+    padding: 15px;
+    margin:5px 0 0 10px;
+    background: darkslateblue;
+    color: snow;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 2px black ;
+}
+.nb .user-photo{
+    align-self: flex-end;
+    
+}
+.n{
+    font-size: 50px;
+    color: steelblue;
+}
+.nb .message{
+    background: rgb(38, 196, 117);
+    text-align: right;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    order:-1;
+}
+.inp{
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: steelblue;
+}
+.inp input{
+    padding: 10px;
+    background: rgb(38, 196, 117);
+    width: 70%;
+    height: 50px;
+    border: 2px solid rgb(38, 196, 117);
+    border-radius: 25px;
+    padding:5px;
+    font-size: 18px;
+    color: snow;
+}
+/*.inp button{
+    width: 10%;
+    border:2px solid  rgb(38, 196, 117);
+   
+    height:50px;
+    
+    background: lightgray;
+    color:  rgb(38, 196, 117);
+    
+    border-radius: 25px;  
+}
+.inp button:hover{
+    background:  rgb(38, 196, 117);
+    color: lightgray;
+}
+*/
+.inp button{
+    width: 13%;
+    height:50px;
+    border-radius: 25px;
+}
+
+.opt{
+    border:2px solid white;
+    padding: 5px;
+    margin: 10px;
+    padding: 15px;
+    color:  white;
+    background: transparent;
+    border-radius: 25px;
+    width: 46%;
+    font-size: 16px;
+}
+.opt:nth-child(2n){
+    margin-right: 0;
+    margin-left: 0;
+}
+.opt:hover{
+    color: lightgray;
+    background: steelblue;
+}
+.x{
+     color: white;
+}
+.y{
+    background: lightgray;
+    color:  rgb(38, 196, 117);
+    border:2px solid  rgb(38, 196, 117);
+}
+.y span{
+font-family: fontAwesome;
+}
+.in button{
+    background: cadetblue;
+}
+
+.inpbtn{
+    color: blue;
+}
+input[type=file] {
+    border:2px solid white;
+    padding: 5px;
+    margin: 10px;
+    padding: 15px;
+    color:  white;
+    background: transparent;
+    border-radius: 25px;
+    width: 98%;
+}
+.chat-content {
+    margin-top: 56px;
+}
+.chatlogs .upload-img-chat{
+    margin-left: 10px;
+}
+.inp .mat-button-wrapper a{
+    color: white;
+    padding: 25px;
+}
+@media screen and (min-width: 768px){
+    .chat-content{
+        overflow: hidden;
+    }
+    .chatbox{
+        width: 100vw;
+        margin: 0 auto;
+    }
+    .chatlogs{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .inp-block{
+        width: 100%;
+        height: 71px;
+    }
+    .inp{
+        width: 50%;
+        left: 25%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .inp-block{
+        height: 120px;
+    }
+}

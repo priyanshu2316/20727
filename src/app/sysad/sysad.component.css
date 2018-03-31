@@ -1,0 +1,26 @@
+ .sysadmin_dash{
+    width: 100%;
+    padding: 10px;
+    margin-top: 54px;
+    text-align: center;
+    background: #863b63;
+    height: auto;
+    min-height: 100%;
+}
+
+.sysadmin_dash .opt{
+    border:2px solid white;
+    padding: 5px;
+    margin: 10px 0;
+    padding: 15px;
+    color:  white;
+    background: transparent;
+    border-radius: 25px;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px){
+    .sysadmin_dash .opt{
+        width: 50%;
+    }
+}

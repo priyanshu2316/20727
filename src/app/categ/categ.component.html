@@ -1,0 +1,50 @@
+<app-home></app-home>
+<h1>.</h1>
+<div [hidden]="submit">
+  
+  <div class="container">
+  <h2>Add Problem Category</h2>
+  <form (ngSubmit)="OnSubmit()" #thisForm="ngForm">
+    <div class="form-group">
+      <label for="Category Name">Name</label>
+      <input type="text" class="form-control" id="CategName" required [(ngModel)]="categ.category" name="CategName" #name="ngModel">
+      <div [hidden]="name.valid || name.pristine"
+     class="alert alert-danger">
+       Enter Category name
+     </div>
+     
+    </div>
+
+    <div class="form-group">
+      <label for="Admin">Admin</label>
+      <select class="form-control" id="Type" required [(ngModel)]="categ.padmin" name="Admin">
+       <option *ngFor="let admin of admins" [value]="admin.name">{{admin.name}}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!thisForm.form.valid">Submit</button>
+
+  </form>
+ </div>
+</div>
+
+<div [hidden]="!submit">
+  <h2>You submitted the following:</h2>
+ 
+  <div class="row">
+    <div class="col-xs-3">Name</div>
+    <div class="col-xs-9 pull-left">{{ categ.category }}</div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-3">Administrator</div>
+    <div class="col-xs-9 pull-left">{{ categ.padmin }}</div>
+  </div>
+  <br>
+  <button class="btn btn-primary" (click)="submit=false">Edit</button>
+  <button class="btn btn-primary" (click)="addedcategory()">Done</button>
+  <div [hidden]="i">
+  <button  mat-button color='primary' routerLink="/sa">Make more changes</button>
+</div>
+</div>
+

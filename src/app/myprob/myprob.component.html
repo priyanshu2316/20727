@@ -1,0 +1,33 @@
+<app-home></app-home>
+<section class="user-problem-container">
+    <div class="user-problem-content">
+        <div *ngFor="let prb of prbs">
+            <mat-card [class]="a+prb.status+b">
+                <!--<img class="im" src="assets/img/b.jpg">-->
+                <div class="col-xs-8 col-md-10 videolist-content-item">
+                    <h3>{{prb.category}}</h3>
+                    <p><b>Location :  </b>{{prb.location}}</p>
+                    <p><b>Status :  </b>{{prb.status}}</p>
+                    <p><b>Description :  </b>{{prb.description}}</p>
+                    <p><b>Date Added :  </b>{{prb.dateS}}</p>
+                    <div [class]="prb.status+c">
+                        ARE YOU HAPPY??
+                        <mat-radio-group [(ngModel)]="prb.status">
+                            <mat-radio-button (click)="ival1(prb._id)" class="example-margin" value="solved">
+                                Yes
+                            </mat-radio-button>
+                            <mat-radio-button (click)="ival2(prb._id)" class="example-margin" value="unsolved">
+                                No
+                            </mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-md-2 videolist-content-item">
+                    <div>
+                        <img class="im" src="{{'http://192.168.42.33:3000'+prb.image}}" alt="NO PREVIEW IMAGE UPLOADED">
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</section>

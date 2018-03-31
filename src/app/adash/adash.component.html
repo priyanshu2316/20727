@@ -1,0 +1,75 @@
+<mat-card [class]='i' >
+    <img class="im" src="assets/img/b.jpg">
+  <h3>Electricity</h3>
+  
+  <p>Location1</p>
+ 
+  <p>{{status}}</p>
+  <mat-radio-group [(ngModel)]="qwerty">
+
+    <mat-radio-button (click)="ival1()" class="example-margin" value="1">
+      Unsolved
+    </mat-radio-button>
+    <mat-radio-button (click)="ival2()" class="example-margin" value="2">
+      Solved
+    </mat-radio-button>
+    
+  </mat-radio-group>
+ 
+</mat-card>
+<mat-card class="meracard unsolved" >
+    <img class="im"  src="assets/img/chatbox.jpg">
+  <h3>Computer</h3>
+  <p>Location2</p>
+ 
+  <p>Status</p>
+  <mat-radio-group [(ngModel)]="colo">
+
+      <mat-radio-button  class="example-margin" value="Unsolved">
+        Unsolved
+      </mat-radio-button>
+      <mat-radio-button  class="example-margin" value="Review">
+        Review
+      </mat-radio-button>
+      
+    </mat-radio-group>
+   
+
+  </mat-card>
+  <mat-card class="meracard unsolved" >
+      <img class="im"  src="assets/img/chatbox.jpg">
+    <h3>Computer</h3>
+    <p>Location2</p>
+   
+    <p>Status</p>
+    <mat-radio-group [(ngModel)]="colo">
+  
+        <mat-radio-button  class="example-margin" value="Unsolved">
+          Unsolved
+        </mat-radio-button>
+        <mat-radio-button  class="example-margin" value="Review">
+          Review
+        </mat-radio-button>
+        
+      </mat-radio-group>
+
+
+    </mat-card>
+    <mat-card class="meracard unsolved" >
+        <img class="im"  src="assets/img/chatbox.jpg">
+      <h3>Computer</h3>
+      <p>Location2</p>
+     
+      <p>Status</p>
+      <mat-radio-group [(ngModel)]="colo">
+    
+          <mat-radio-button  class="example-margin" value="Unsolved">
+            Unsolved
+          </mat-radio-button>
+          <mat-radio-button  class="example-margin" value="Review">
+            Review
+          </mat-radio-button>
+          
+        </mat-radio-group>
+  
+</mat-card>

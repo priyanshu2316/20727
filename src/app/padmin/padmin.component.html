@@ -1,0 +1,57 @@
+<app-home></app-home>
+<!--
+<mat-grid-list  cols="3" rowHeight="600px" gutterSize=10px; >
+  <mat-grid-tile class=problem *ngFor="let el of ele">
+    <mat-card class=problem >
+     <h1 align="center">{{el.Id}}.{{el.Category}}</h1>
+     <br>
+     <img margin-left=50px width=200px height=200px align=center src={{el.Image}} alt="preview not available" >
+     <br>
+     <mat-card-content>
+     <div class=cl>
+        <b>User:</b> {{el.NameOfUser}}
+        <br>
+        <div class=Desc>
+        <b>Description: </b> {{el.Description}}
+         </div>
+        <br>
+        <b>Loaction: </b> {{el.Location}}
+        <br>
+        <b>Status:</b> {{el.Status}}
+      </div>
+    </mat-card-content>
+    <button (click)= "OnSelect(el)">change-state</button>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+-->
+<div class="padmin-problem-container">
+<div class="padmin-problem-content">
+<div *ngFor="let prb of prbs" >
+  <mat-card  [class]="a+prb.status+b">
+     <!-- <img class="im" src="assets/img/b.jpg">-->
+      <div class="col-xs-8 col-md-10 videolist-content-item">
+    <h3>{{prb.category}}</h3>
+    
+    <p><b>Location :  </b><i>{{prb.location}}</i></p>
+    <p><b>Status :  </b><i>{{prb.status}}</i></p>
+    <p><b>Description :  </b><i>{{prb.description}}</i></p>
+    <p><b>Date Added :  </b>{{prb.dateS}}</p>
+    <p><b>Submitted By :  </b>{{prb.username}}</p>
+    <mat-radio-group [class]="prb.status+c" [(ngModel)]="prb.status">
+  
+      <mat-radio-button (click)="ival1(prb._id,prb.status,prb.username)" class="example-margin" value="review">
+        Review
+      </mat-radio-button>
+      
+    </mat-radio-group>
+      </div>
+      <div class="col-xs-4 col-md-2 videolist-content-item">
+        <div>
+          <img class="im" src="{{'http://192.168.42.33:3000'+prb.image}}" alt="NO PREVIEW IMAGE UPLOADED">
+        </div>
+     </div>
+  </mat-card>
+</div>
+</div>
+</div>

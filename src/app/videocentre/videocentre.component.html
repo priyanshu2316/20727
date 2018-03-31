@@ -1,0 +1,17 @@
+<!--<p>
+  videocentre works!
+</p><videolist (SelectVideo)="onselectvideo($event)"[Vids]='Vids'></videolist>-->
+<app-home></app-home>
+<section class="dashboard">
+  <div>
+      <div class="dashboad_content">
+        <div class="col-xs-12 dashboad_problems_block">
+          <div class="dashboad_problems" *ngFor="let p of Vids"[routerLink]="['/videolist',p.category]">
+              <p>{{p.category | uppercase}}</p>
+              <!--<p>Average Resolution time</p>-->
+          </div>
+        </div>
+      </div>
+
+    </div>
+</section>

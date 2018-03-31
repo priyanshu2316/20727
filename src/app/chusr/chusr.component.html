@@ -1,0 +1,81 @@
+<app-home></app-home>
+ 
+<div class="add-user-container">
+    <div [hidden]="submit" class="add-user-content">
+  <h2>Add User</h2>
+  <form (ngSubmit)="OnSubmit()" #thisForm="ngForm">
+
+
+
+    <div class="form-group">
+      <label for="Id">User Id</label>
+      <input type="text" class="form-control" id="Id" required [(ngModel)]="user.username" name="Id" #name="ngModel">
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+       Id is required
+     </div>
+    </div>
+
+    <div class="form-group">
+      <label for="Name">User name</label>
+      <input type="text" class="form-control" id="Name" required [(ngModel)]="user.name" name="Name" #name="ngModel">
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+       Name is required
+     </div>
+    </div>
+
+     <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="password" class="form-control" id="Password" required [(ngModel)]="user.password" name="Password">
+      </div>
+
+      <div class="form-group">
+          <label for="Contact">Contact Number</label>
+          <input type="text" class="form-control" id="Contact" required [(ngModel)]="user.phone" name="Contact">
+        </div>
+
+        <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="email" class="form-control" id="Email" required [(ngModel)]="user.email" name="Email">
+          </div>
+
+          <div class="form-group">
+              <label for="Type">Type</label>
+              <select class="form-control" id="Type" required [(ngModel)]="user.type" name="Type">
+               <option *ngFor="let type of types" [value]="type">{{type}}</option>
+              </select>
+          </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!thisForm.form.valid">Submit</button>
+
+  </form>
+ </div>
+    <div [hidden]="!submit" class="confirm-submit-block">
+  <h2>You submitted the following:</h2>
+  <div class="row">
+    <div class="col-xs-3">Id</div>
+    <div class="col-xs-9 pull-left">{{ user.username }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Name</div>
+    <div class="col-xs-9 pull-left">{{ user.name }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">contact</div>
+    <div class="col-xs-9 pull-left">{{ user.phone }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">emailid</div>
+    <div class="col-xs-9 pull-left">{{ user.email }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">type</div>
+    <div class="col-xs-9 pull-left">{{ user.type }}</div>
+  </div>
+  <br>
+  <button class="btn btn-primary" (click)="submit=false">Edit</button>
+  <button class="btn btn-primary" (click)="addeduser()">Done</button>
+<div  [hidden]="i">
+  <button x mat-button color='primary' routerLink="/sa">Make more canges</button>
+</div>
+</div>
+</div>

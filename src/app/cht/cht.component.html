@@ -1,0 +1,41 @@
+<app-home></app-home>
+<section class="chat-content" style="background: linear-gradient(rgb(38, 196, 117),rgb(38, 196, 117),steelblue);">
+<div class="chatbox">
+  <div class="chatlogs">
+
+      <div class="chat">
+          <div class="user-photo"><img src="assets/img/b.jpg"></div>
+          <p class="message">What Problem do you have?</p>
+      </div>
+      <div [hidden]="catsel">
+      <button class="opt" (click)="onClick(prod.category,prod.padmin)" *ngFor="let prod of prodo">{{prod.category}}</button>
+      </div>
+      <div *ngFor="let messag of messages" [class]="messag.nb">
+            <div class="user-photo"><img [src]="messag.i"></div>
+        <p class="message">{{messag.text}}</p>
+      </div>
+      
+      <div [hidden]="nvis">
+      <input id="imageFile" type="file" />
+      <button class="opt upload-img-chat" (click)="onClick(z)">Upload</button>
+     </div>
+     <div [hidden]="loclistnotvisible">
+        <select class="opt form-control" id="Loc" required [(ngModel)]="sent" name="Loc">
+            <option *ngFor="let loc of locs" [value]="loc.location">{{loc.location}}</option>
+        </select>
+       </div>
+
+      <button class="opt" (click)="onClick(cbtn)" *ngFor="let cbtn of cbtns">{{cbtn}}</button>
+      
+  </div>
+  <div class="inp-block">
+  <div class="inp">
+      <input type="text" [(ngModel)]='sent'>
+      <button class="y" (click)="send()"><span class="fa fa-paper-plane fa-lg"></span></button>
+      <button mat-mini-fab color="warn" class='x'><a href ="tel:7415741560">SOS</a></button>
+    </div>
+  </div>
+     
+    
+</div>
+</section>

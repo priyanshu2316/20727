@@ -1,0 +1,18 @@
+<app-home></app-home>
+<section class="view-technician-container">
+  <div>
+      <div class="view-technician-content">
+      	<p class="view-technician-title"></p>
+        <div class="col-xs-12 view-technician-block">
+          <div class="view-technician-list" *ngFor="let p of ts">
+          	<div class="view-technician-item">
+              <p class="tech-name">{{p.name | uppercase}}</p>
+              <a class="tech-phone" href="tel:{{p.phone}}">{{p.phone}}</a>
+              <p class="tech-specialisation">{{p.specialisation}}</p>
+          	</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</section>

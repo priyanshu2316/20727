@@ -1,0 +1,72 @@
+mat-card {
+  max-width: 400px;
+  margin: 2em auto;
+  text-align: center;
+}
+.full-width-input {
+  width: 100%;
+}
+.mat-radio-button ~ .mat-radio-button {
+  padding-right: 16px;
+}
+body{
+  background: rgb(100, 100, 100);
+}
+
+.login-container{
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background: -webkit-linear-gradient(#ff9933, white, green);
+    background:    -moz-linear-gradient(#ff9933, white, green);
+    background:     -ms-linear-gradient(#ff9933, white, green);
+    background:      -o-linear-gradient(#ff9933, white, green);
+    background:         linear-gradient(#ff9933, white, green);
+    overflow: hidden;
+}
+.login-container h1{
+    height: auto;
+}
+.signin-content .mat-card{
+  background: transparent;
+  box-shadow: none;
+}
+
+.signin-content form .please-login-text {
+    text-align: left;
+    margin-left: 20%;
+    font-size: 18px;
+}
+.signin-content form .mat-radio-button{
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    margin-left: 25%;
+    margin-top: 10px;
+}
+.signin-content form .mat-input-container{
+    margin-top: 10px;
+}
+.signin-content form .mat-raised-button{
+	background: #3f51b5;
+    color: white;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+}
+.login-container .welcome-app-text{
+    width: 100%;
+    padding-top: 25%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 768px){
+	.login-container .welcome-app-text{
+		  padding-top: 5%;
+	}
+}

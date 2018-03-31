@@ -1,0 +1,51 @@
+<section class="login-container">
+<div [hidden]=i>
+
+  <p class="welcome-app-text">Welcome to Campus Mitra</p>
+
+<div class="signin-content">
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <p class="please-login-text">Please login to continue</p>
+        <mat-radio-group formControlName="type" required>
+          <mat-radio-button  value="1">User</mat-radio-button>
+          <mat-radio-button  value="2"> Problem Admin</mat-radio-button>
+          <mat-radio-button  value="3"> System Admin</mat-radio-button>
+
+</mat-radio-group>
+        <mat-input-container class="full-width-input">
+          <input matInput placeholder="User"
+                 formControlName="userName" required>
+          <mat-error *ngIf="isFieldInvalid('userName')">
+            Please inform your user name
+          </mat-error>
+        </mat-input-container>
+        <mat-input-container class="full-width-input">
+          <input matInput type="password" placeholder="Password"
+                 formControlName="password" required>
+          <mat-error *ngIf="isFieldInvalid('password')">
+            Please inform your password
+          </mat-error>
+        </mat-input-container>
+        <p class="Unauthorised">{{prin}}</p>
+        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid" ><span class="fa fa-sign-in fa-lg"></span> Login</button>
+
+      </form>
+      <!--<div>
+       <h3>NEW USER?</h3>
+       <a [routerLink]="['/register']" class="btn <nav>
+
+       </nav>btn-link">Register</a>
+    </div>-->
+    </mat-card-content>
+  </mat-card>
+
+</div>
+</div>
+<div [hidden]="!i">
+  <h1>You must Logout of current session to Login. Do you want to logout??</h1>
+  <button (click)="logout()"><h2>Logout</h2></button>
+  <button (click)="gb()"><h2>Go Back</h2></button>
+</div>
+</section>

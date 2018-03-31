@@ -1,0 +1,39 @@
+<app-home></app-home>
+  
+<div class="add-location-container">
+<div [hidden]="submit" class="add-location-content">
+  <h2>Add Problem Category</h2>
+  <form (ngSubmit)="OnSubmit()" #thisForm="ngForm">
+    <div class="form-group">
+      <label for="Location">Location</label>
+      <input type="text" class="form-control" id="Location" required [(ngModel)]="location" name="Location" #name="ngModel">
+      <div [hidden]="name.valid || name.pristine"
+     class="alert alert-danger">
+       Enter Location
+     </div>
+     
+    </div>
+
+
+    <button type="submit" class="btn btn-success" [disabled]="!thisForm.form.valid">Submit</button>
+
+  </form>
+ </div>
+
+<div [hidden]="!submit" class="confirm-submit-block">
+  <h2>You submitted the following:</h2>
+ 
+  <div class="row">
+    <div class="col-xs-3">Name</div>
+    <div class="col-xs-9 pull-left">{{ location }}</div>
+  </div>
+
+  <br>
+  <button class="btn btn-primary" (click)="submit=false">Edit</button>
+  <button class="btn btn-primary" (click)="addedlocation()">Done</button>
+  <div [hidden]="i">
+  <button  mat-button color='primary' routerLink="/sa">Make more changes</button>
+</div>
+</div>
+
+

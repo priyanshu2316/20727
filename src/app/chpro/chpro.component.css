@@ -1,0 +1,48 @@
+.add-prob-admin-container{
+	margin-top: 56px;
+    height: auto;
+    min-height: 100%;
+    background: #863b63;
+	padding-top: 5px;
+}
+.add-prob-admin-content{
+	color: white;
+    padding: 0 10px;
+}
+.confirm-submit-block{
+	width: 100%;
+    margin: 0 auto;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+}
+.confirm-submit-block .btn{
+    width: 48%;
+	border-radius: 5px;
+}
+.confirm-submit-block .mat-button{
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+@media screen and (min-width: 768px){
+	.add-prob-admin-container{
+		margin-top: 64px;
+	    height: auto;
+	    min-height: 100%;
+	    background: #863b63;
+	}
+	.add-prob-admin-content{
+	    width: 50%;
+		margin: 0 auto;
+	}
+	.confirm-submit-block{
+		width: 50%;
+	    margin: 0 auto;
+	    color: white;
+	    border: 2px solid white;
+	    padding: 10px;
+	}
+}

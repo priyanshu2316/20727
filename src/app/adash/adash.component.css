@@ -1,0 +1,34 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.meracard{
+  
+    margin: 10px;
+    overflow: auto;
+    padding-block-start: 5px;
+
+}
+.meracard img:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+.example-margin {
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+.im{
+    
+    vertical-align: text-top;
+    width: 120px;
+    height: 120px;
+    float: right;
+
+}
+.unsolved{
+    color: white;
+    background: rgb(207, 34, 34);
+}
+.review{
+    background: rgb(91, 161, 253);
+}
+.solved{
+    background: rgb(83, 255, 126);
+}

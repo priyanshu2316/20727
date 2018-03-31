@@ -1,0 +1,38 @@
+<app-home></app-home>
+<div class="remove-prob-admin-container">
+<div [hidden]="submit" class="remove-prob-admin-content">
+
+  <h2>Remove Problem Administrator</h2>
+  <form (ngSubmit)="OnSubmit()" #thisForm="ngForm">
+
+
+
+    <div class="form-group">
+      <label for="Id">User Id</label>
+      <input type="text" class="form-control" id="Id" required [(ngModel)]="user" name="Id" #name="ngModel">
+      <div [hidden]="name.valid || name.pristine"
+     class="alert alert-danger">
+       Id is required
+     </div>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!thisForm.form.valid">Submit</button>
+
+  </form>
+ </div>
+
+<div [hidden]="!submit" class="confirm-submit-block">
+  <h2>You submitted the following:</h2>
+  <div class="row">
+    <div class="col-xs-3">Id</div>
+    <div class="col-xs-9 pull-left">{{ user }}</div>
+  </div>
+
+  <br>
+  <button class="btn btn-primary" (click)="submit=false">Edit</button>
+  <button class="btn btn-primary" (click)="cl()">Done</button>
+<div  [hidden]="i">
+  <button x mat-button color='primary' routerLink="/sa">Make more canges</button>
+</div>
+</div>
+
